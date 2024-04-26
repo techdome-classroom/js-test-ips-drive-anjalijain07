@@ -1,9 +1,15 @@
 function smallestMissingPositiveInteger(nums) {
+  const numSet = new Set(nums);
 
+  let smallestMissing = 1;
 
-    // Implement the function smallest_missing_positive_integer
-  
+  // Iterate until the smallest missing positive integer is found
+  while (numSet.has(smallestMissing)) {
+      smallestMissing++;
   }
-  
-  module.exports = smallestMissingPositiveInteger;
+
+  return smallestMissing;
+}
+
+module.exports = smallestMissingPositiveInteger;
 
